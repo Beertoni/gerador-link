@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>Gerador de Link WhatsApp Grátis | Criar Link Direto WhatsApp</title>
+  <meta name="description" content="Crie seu link direto para WhatsApp grátis! Gerador de link personalizado para WhatsApp com mensagem automática. Ideal para negócios, Instagram Bio, Facebook e TikTok. Simples, rápido e gratuito." />
+  <meta name="keywords" content="gerador de link whatsapp, criar link para whats, link direto whatsapp, link personalizado whatsapp, whatsapp para negócios, gerar link whatsapp grátis, botão whatsapp, link whatsapp com mensagem" />
+  <meta name="author" content="Gerador WhatsApp Link" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://geradorlinkwhatsapp.com.br/" />
+
+  <!-- ===== OPEN GRAPH (Facebook / WhatsApp) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gerador de Link WhatsApp Grátis | Link Direto WhatsApp" />
+  <meta property="og:description" content="Crie links personalizados para WhatsApp com mensagem automática. Gere QR Code, copie o link e compartilhe em redes sociais. 100% gratuito!" />
+  <meta property="og:url" content="https://geradorlinkwhatsapp.com.br/" />
+  <meta property="og:image" content="https://geradorlinkwhatsapp.com.br/og-image.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Gerador de Link WhatsApp" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gerador de Link WhatsApp Grátis" />
+  <meta name="twitter:description" content="Crie links personalizados para WhatsApp com mensagem automática. 100% gratuito!" />
+  <meta name="twitter:image" content="https://geradorlinkwhatsapp.com.br/og-image.png" />
+
+  <!-- ===== STRUCTURED DATA (Schema.org) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gerador de Link WhatsApp",
+    "description": "Ferramenta gratuita para criar links diretos para WhatsApp com mensagem personalizada e QR Code.",
+    "url": "https://geradorlinkwhatsapp.com.br/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===== TAILWIND CSS ===== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wgreen: '#25D366',
+            wdark:  '#128C7E',
+            wlight: '#DCF8C6',
+            wgray:  '#075E54',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- ===== FONT AWESOME ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+
+  <!-- ===== QR CODE LIBRARY ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <!-- ===== CUSTOM CSS ===== -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="bg-wgray shadow-lg sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 bg-wgreen rounded-full flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          <i class="fab fa-whatsapp text-white text-xl"></i>
+        </div>
+        <span class="text-white font-bold text-lg leading-tight hidden sm:block">
+          Gerador<span class="text-wgreen">Link</span>
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <li><a href="index.html" class="text-wgreen border-b-2 border-wgreen pb-0.5">Início</a></li>
+        <li><a href="privacy.html" class="text-gray-300 hover:text-wgreen transition-colors">Privacidade</a></li>
+        <li><a href="terms.html" class="text-gray-300 hover:text-wgreen transition-colors">Termos de Uso</a></li>
+        <li><a href="contact.html" class="text-gray-300 hover:text-wgreen transition-colors">Contato</a></li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg hover:bg-wdark transition-colors" aria-label="Menu">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="md:hidden hidden bg-wgray border-t border-wdark">
+      <ul class="px-4 py-3 flex flex-col gap-3 text-sm font-medium">
+        <li><a href="index.html" class="text-wgreen flex items-center gap-2"><i class="fas fa-home w-4"></i> Início</a></li>
+        <li><a href="privacy.html" class="text-gray-300 hover:text-wgreen flex items-center gap-2"><i class="fas fa-shield-alt w-4"></i> Privacidade</a></li>
+        <li><a href="terms.html" class="text-gray-300 hover:text-wgreen flex items-center gap-2"><i class="fas fa-file-alt w-4"></i> Termos de Uso</a></li>
+        <li><a href="contact.html" class="text-gray-300 hover:text-wgreen flex items-center gap-2"><i class="fas fa-envelope w-4"></i> Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== AD SLOT A — TOP BANNER ===== -->
+  <div id="adsense-top" class="ad-slot ad-slot-banner" aria-label="Publicidade" role="complementary">
+    <div class="ad-placeholder">
+      <span>Espaço Publicitário — 728×90</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-gradient text-white py-12 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+          <i class="fab fa-whatsapp text-4xl text-white"></i>
+        </div>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">
+        Gerador de Link para WhatsApp
+      </h1>
+      <p class="text-white/80 text-base sm:text-lg max-w-xl mx-auto">
+        Crie um <strong class="text-white">link direto para WhatsApp</strong> com mensagem personalizada. 
+        Ideal para negócios, redes sociais e atendimento ao cliente. <strong class="text-white">100% gratuito!</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- ===== LEFT: GENERATOR + RESULT ===== -->
+      <div class="flex-1 min-w-0">
+
+        <!-- Generator Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="bg-gradient-to-r from-wgray to-wdark px-6 py-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <i class="fas fa-link text-wgreen"></i>
+              Criar Link Personalizado
+            </h2>
+            <p class="text-white/70 text-sm mt-0.5">Preencha os campos abaixo e gere seu link</p>
+          </div>
+
+          <div class="p-6 space-y-5">
+
+            <!-- Phone Number Field -->
+            <div>
+              <label for="phoneInput" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                <i class="fas fa-phone text-wdark mr-1.5"></i>
+                Número do WhatsApp <span class="text-red-500">*</span>
+              </label>
+              <div class="flex gap-2">
+                <div class="relative">
+                  <select id="countryCode" class="h-12 pl-3 pr-8 border border-gray-200 rounded-xl bg-gray-50 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-wgreen focus:border-transparent appearance-none cursor-pointer" aria-label="Código do país">
+                    <option value="55" selected>🇧🇷 +55</option>
+                    <option value="1">🇺🇸 +1</option>
+                    <option value="351">🇵🇹 +351</option>
+                    <option value="34">🇪🇸 +34</option>
+                    <option value="44">🇬🇧 +44</option>
+                    <option value="49">🇩🇪 +49</option>
+                    <option value="33">🇫🇷 +33</option>
+                    <option value="39">🇮🇹 +39</option>
+                    <option value="54">🇦🇷 +54</option>
+                    <option value="56">🇨🇱 +56</option>
+                    <option value="57">🇨🇴 +57</option>
+                    <option value="52">🇲🇽 +52</option>
+                    <option value="598">🇺🇾 +598</option>
+                    <option value="595">🇵🇾 +595</option>
+                    <option value="591">🇧🇴 +591</option>
+                    <option value="51">🇵🇪 +51</option>
+                    <option value="58">🇻🇪 +58</option>
+                    <option value="593">🇪🇨 +593</option>
+                    <option value="63">🇵🇭 +63</option>
+                    <option value="91">🇮🇳 +91</option>
+                    <option value="86">🇨🇳 +86</option>
+                    <option value="81">🇯🇵 +81</option>
+                    <option value="27">🇿🇦 +27</option>
+                    <option value="234">🇳🇬 +234</option>
+                    <option value="20">🇪🇬 +20</option>
+                  </select>
+                  <i class="fas fa-chevron-down absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs pointer-events-none"></i>
+                </div>
+                <div class="flex-1 relative">
+                  <input
+                    type="tel"
+                    id="phoneInput"
+                    placeholder="(11) 99999-9999"
+                    class="w-full h-12 px-4 border border-gray-200 rounded-xl bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-wgreen focus:border-transparent transition-all"
+                    maxlength="20"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+              <p id="phoneError" class="text-red-500 text-xs mt-1.5 hidden flex items-center gap-1">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Por favor, insira um número válido.</span>
+              </p>
+              <p class="text-gray-400 text-xs mt-1.5">
+                <i class="fas fa-info-circle mr-1"></i>
+                Digite apenas os números (DDD + número). Ex: 11999998888
+              </p>
+            </div>
+
+            <!-- Message Field -->
+            <div>
+              <label for="messageInput" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                <i class="fas fa-comment-dots text-wdark mr-1.5"></i>
+                Mensagem Personalizada <span class="text-gray-400 text-xs font-normal">(opcional)</span>
+              </label>
+              <textarea
+                id="messageInput"
+                rows="4"
+                placeholder="Olá! Vim pelo seu site e gostaria de mais informações sobre..."
+                class="w-full px-4 py-3 border border-gray-200 rounded-xl bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-wgreen focus:border-transparent transition-all resize-none"
+                maxlength="500"
+              ></textarea>
+              <div class="flex justify-between mt-1">
+                <p class="text-gray-400 text-xs">
+                  <i class="fas fa-info-circle mr-1"></i>
+                  A mensagem será pré-preenchida na conversa
+                </p>
+                <span id="charCount" class="text-gray-400 text-xs">0/500</span>
+              </div>
+            </div>
+
+            <!-- Preview -->
+            <div id="previewWrapper" class="hidden">
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+                <i class="fas fa-eye text-wdark mr-1.5"></i>
+                Pré-visualização do Link
+              </label>
+              <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center gap-2 group">
+                <i class="fab fa-whatsapp text-wgreen text-lg flex-shrink-0"></i>
+                <span id="linkPreview" class="text-xs text-gray-600 break-all flex-1 font-mono"></span>
+              </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button
+              id="generateBtn"
+              onclick="generateLink()"
+              class="w-full h-13 py-3.5 bg-wgreen hover:bg-green-500 active:scale-95 text-white font-bold text-base rounded-xl shadow-lg shadow-green-200 transition-all duration-200 flex items-center justify-center gap-2.5 group"
+            >
+              <i class="fas fa-bolt group-hover:animate-pulse"></i>
+              Gerar Link Agora
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ===== RESULT CARD ===== -->
+        <div id="resultCard" class="hidden mt-6 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="bg-gradient-to-r from-wgreen to-green-400 px-6 py-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <i class="fas fa-check-circle"></i>
+              Link Gerado com Sucesso!
+            </h2>
+          </div>
+          <div class="p-6 space-y-5">
+
+            <!-- Generated Link Display -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-link text-wdark mr-1.5"></i>
+                Seu Link Direto para WhatsApp
+              </label>
+              <div class="flex gap-2">
+                <div class="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs text-gray-700 break-all">
+                  <span id="generatedLink"></span>
+                </div>
+                <button
+                  id="copyBtn"
+                  onclick="copyLink()"
+                  class="flex-shrink-0 w-12 h-12 bg-wgreen hover:bg-green-500 active:scale-95 text-white rounded-xl shadow-md transition-all duration-200 flex items-center justify-center relative group"
+                  title="Copiar link"
+                  aria-label="Copiar link"
+                >
+                  <i id="copyIcon" class="fas fa-copy text-lg"></i>
+                  <span id="copiedTooltip" class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2.5 py-1.5 rounded-lg whitespace-nowrap opacity-0 pointer-events-none transition-opacity shadow-lg">
+                    Copiado! ✓
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3">
+              <a
+                id="openWhatsApp"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 py-3 bg-wgray hover:bg-wdark text-white text-sm font-semibold rounded-xl transition-colors shadow-sm"
+              >
+                <i class="fab fa-whatsapp text-wgreen text-lg"></i>
+                Abrir WhatsApp
+              </a>
+              <button
+                onclick="downloadQR()"
+                class="flex items-center justify-center gap-2 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold rounded-xl transition-colors"
+              >
+                <i class="fas fa-download text-wdark"></i>
+                Baixar QR Code
+              </button>
+            </div>
+
+            <!-- QR Code -->
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-3 text-center">
+                <i class="fas fa-qrcode text-wdark mr-1.5"></i>
+                QR Code do Link
+              </label>
+              <div class="flex justify-center">
+                <div class="qr-wrapper bg-white p-4 rounded-2xl shadow-inner border border-gray-100">
+                  <div id="qrcode"></div>
+                </div>
+              </div>
+              <p class="text-center text-xs text-gray-400 mt-2">
+                <i class="fas fa-mobile-alt mr-1"></i>
+                Escaneie com qualquer câmera de smartphone
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== AD SLOT B — MOBILE (between generator and history) ===== -->
+        <div id="adsense-middle" class="ad-slot ad-slot-rect lg:hidden mt-6" aria-label="Publicidade" role="complementary">
+          <div class="ad-placeholder">
+            <span>Espaço Publicitário — 336×280</span>
+          </div>
+        </div>
+
+        <!-- ===== HOW TO USE ===== -->
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="px-6 py-5 border-b border-gray-100">
+            <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-book-open text-wdark"></i>
+              Como Usar o Gerador de Link WhatsApp
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">Siga 3 passos simples para criar seu link direto</p>
+          </div>
+          <div class="p-6">
+            <div class="grid sm:grid-cols-3 gap-5">
+              <!-- Step 1 -->
+              <div class="how-step flex flex-col items-center text-center p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-wgreen hover:bg-green-50 transition-all group">
+                <div class="w-12 h-12 rounded-full bg-wgreen flex items-center justify-center text-white font-bold text-xl mb-3 shadow-lg shadow-green-200 group-hover:scale-110 transition-transform">
+                  1
+                </div>
+                <i class="fas fa-mobile-alt text-wdark text-2xl mb-2"></i>
+                <h3 class="font-bold text-gray-800 mb-1.5">Digite o Número</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  Selecione o código do país e informe o número do WhatsApp com DDD, sem espaços ou traços.
+                </p>
+              </div>
+              <!-- Step 2 -->
+              <div class="how-step flex flex-col items-center text-center p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-wgreen hover:bg-green-50 transition-all group">
+                <div class="w-12 h-12 rounded-full bg-wgreen flex items-center justify-center text-white font-bold text-xl mb-3 shadow-lg shadow-green-200 group-hover:scale-110 transition-transform">
+                  2
+                </div>
+                <i class="fas fa-comment-alt text-wdark text-2xl mb-2"></i>
+                <h3 class="font-bold text-gray-800 mb-1.5">Escreva a Mensagem</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  Adicione uma mensagem personalizada que será enviada automaticamente ao iniciar a conversa.
+                </p>
+              </div>
+              <!-- Step 3 -->
+              <div class="how-step flex flex-col items-center text-center p-5 bg-gray-50 rounded-xl border border-gray-100 hover:border-wgreen hover:bg-green-50 transition-all group">
+                <div class="w-12 h-12 rounded-full bg-wgreen flex items-center justify-center text-white font-bold text-xl mb-3 shadow-lg shadow-green-200 group-hover:scale-110 transition-transform">
+                  3
+                </div>
+                <i class="fas fa-share-alt text-wdark text-2xl mb-2"></i>
+                <h3 class="font-bold text-gray-800 mb-1.5">Copie e Compartilhe</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  Clique em "Gerar Link", copie o resultado e cole no Instagram, site, cartão de visitas ou QR Code.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RECENT LINKS ===== -->
+        <div id="recentSection" class="hidden mt-8 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div class="px-6 py-5 border-b border-gray-100 flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                <i class="fas fa-history text-wdark"></i>
+                Links Recentes
+              </h2>
+              <p class="text-gray-400 text-xs mt-0.5">Últimos 5 links gerados neste navegador</p>
+            </div>
+            <button onclick="clearHistory()" class="text-xs text-red-400 hover:text-red-600 font-medium flex items-center gap-1 transition-colors" aria-label="Limpar histórico">
+              <i class="fas fa-trash-alt"></i>
+              Limpar
+            </button>
+          </div>
+          <div id="recentList" class="p-4 space-y-3"></div>
+        </div>
+
+      </div>
+
+      <!-- ===== RIGHT SIDEBAR (Desktop) ===== -->
+      <aside class="hidden lg:block w-72 flex-shrink-0">
+
+        <!-- AD SLOT B — SIDEBAR (Desktop) -->
+        <div id="adsense-sidebar" class="ad-slot ad-slot-sidebar sticky top-24" aria-label="Publicidade" role="complementary">
+          <div class="ad-placeholder ad-placeholder-tall">
+            <span>Espaço Publicitário</span>
+            <span class="text-xs">300×600</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- ===== SEO CONTENT SECTION ===== -->
+  <section class="seo-section mt-10 py-12 px-4" aria-label="Por que usar o Gerador de Link WhatsApp">
+    <div class="seo-container">
+
+      <!-- Main Title -->
+      <h2 class="seo-title">
+        Por que usar um Gerador de Link para WhatsApp?
+      </h2>
+      <p class="seo-intro">
+        O <strong>gerador de link para WhatsApp</strong> é uma ferramenta essencial para empresas e profissionais que desejam facilitar o contato direto com seus clientes. 
+        Com um simples clique, qualquer pessoa pode iniciar uma conversa no WhatsApp sem precisar salvar o número na agenda. 
+        Ideal para <strong>WhatsApp para negócios</strong>, atendimento rápido e aumento de conversões em campanhas digitais.
+      </p>
+
+      <!-- Benefits Grid -->
+      <div class="benefits-grid">
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div class="benefit-content">
+            <h3 class="benefit-title">Facilidade no Atendimento</h3>
+            <p class="benefit-text">
+              Elimine a barreira de "salvar contato". Com o <strong>link direto WhatsApp</strong>, o cliente clica e já está na conversa com você, sem fricção.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="benefit-content">
+            <h3 class="benefit-title">Aumento de Conversão</h3>
+            <p class="benefit-text">
+              O contato com um clique reduz a desistência e aumenta as vendas. Empresas que usam <strong>link personalizado WhatsApp</strong> relatam mais conversas iniciadas.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <div class="benefit-content">
+            <h3 class="benefit-title">Mensagens Personalizadas</h3>
+            <p class="benefit-text">
+              Ao <strong>criar link para WhatsApp com mensagem</strong>, você define o contexto da conversa. Perfeito para campanhas específicas e atendimento segmentado.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <div class="benefit-content">
+            <h3 class="benefit-title">Uso em Redes Sociais</h3>
+            <p class="benefit-text">
+              Coloque seu <strong>link WhatsApp</strong> na bio do Instagram, página do Facebook, vídeos do TikTok ou em anúncios. Funciona em qualquer plataforma digital.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h3 class="faq-title">
+          <i class="fas fa-question-circle text-wdark mr-2"></i>
+          Perguntas Frequentes sobre o Gerador de Link WhatsApp
+        </h3>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <i class="fas fa-tag text-wgreen mr-2"></i>
+              O link de WhatsApp é gratuito?
+              <i class="fas fa-chevron-down faq-arrow ml-auto"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sim, o <strong>link direto WhatsApp</strong> é <strong>100% gratuito e sempre será</strong>! 
+                Não há nenhuma cobrança para usar este <strong>gerador de link WhatsApp</strong>. 
+                O link gerado também não expira — você pode usá-lo indefinidamente em qualquer canal de comunicação, seja site, redes sociais, e-mails ou cartões de visita digitais.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <i class="fas fa-cog text-wgreen mr-2"></i>
+              Como criar um link com mensagem personalizada?
+              <i class="fas fa-chevron-down faq-arrow ml-auto"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                É muito simples! Para <strong>criar link para Whats</strong> com mensagem, siga estes passos:
+              </p>
+              <ol class="faq-steps">
+                <li><strong>1.</strong> Digite o número de WhatsApp com o código do país (ex: +55 para Brasil)</li>
+                <li><strong>2.</strong> Escreva a mensagem que deseja pré-preencher na conversa</li>
+                <li><strong>3.</strong> Clique em "Gerar Link Agora"</li>
+                <li><strong>4.</strong> Copie o link e compartilhe onde quiser!</li>
+              </ol>
+              <p class="mt-2">
+                O link seguirá o formato: <code class="faq-code">wa.me/5511999998888?text=Olá!</code>
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <i class="fab fa-instagram text-wgreen mr-2"></i>
+              Posso usar o link no Instagram?
+              <i class="fas fa-chevron-down faq-arrow ml-auto"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sim! O <strong>link personalizado WhatsApp</strong> funciona perfeitamente no Instagram. 
+                Veja como usar:
+              </p>
+              <ul class="faq-bullets">
+                <li><strong>Bio do Instagram:</strong> Cole o link diretamente no campo "Site" do seu perfil</li>
+                <li><strong>Stories:</strong> Use o sticker de link para adicionar seu WhatsApp</li>
+                <li><strong>Linktree / Beacons:</strong> Adicione como um dos botões do seu link na bio</li>
+                <li><strong>Anúncios:</strong> Use como URL de destino em campanhas do Instagram Ads</li>
+              </ul>
+              <p class="mt-2">Quando alguém clicar, o WhatsApp abrirá diretamente no celular ou no navegador.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <i class="fas fa-building text-wgreen mr-2"></i>
+              Funciona para WhatsApp Business?
+              <i class="fas fa-chevron-down faq-arrow ml-auto"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sim! O <strong>gerador de link WhatsApp</strong> funciona tanto para o WhatsApp pessoal quanto para o <strong>WhatsApp Business</strong>. 
+                Basta inserir o número do WhatsApp Business. O link gerado abrirá o aplicativo correto no dispositivo do cliente. 
+                É uma solução excelente para <strong>WhatsApp para negócios</strong>, especialmente para centralizar o atendimento e gerar mais contatos qualificados.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <i class="fas fa-qrcode text-wgreen mr-2"></i>
+              O que é o QR Code gerado?
+              <i class="fas fa-chevron-down faq-arrow ml-auto"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                O QR Code é uma representação visual do seu <strong>link direto WhatsApp</strong>. 
+                Quando qualquer pessoa escaneia o QR Code com a câmera do celular, ela é direcionada automaticamente para o WhatsApp. 
+                Use o QR Code em:
+              </p>
+              <ul class="faq-bullets">
+                <li>Cartões de visita físicos e digitais</li>
+                <li>Banners, faixas e materiais impressos</li>
+                <li>Cardápios de restaurantes</li>
+                <li>Embalagens de produtos</li>
+                <li>Apresentações e slides</li>
+              </ul>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div class="cta-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="cta-content">
+          <h3 class="cta-title">Pronto para profissionalizar seu atendimento?</h3>
+          <p class="cta-text">Comece a usar agora e profissionalize seu atendimento! Crie seu primeiro link grátis em menos de 30 segundos.</p>
+        </div>
+        <a href="#" onclick="document.getElementById('phoneInput').focus(); return false;" class="cta-btn">
+          <i class="fas fa-rocket mr-2"></i>
+          Criar Meu Link Grátis
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== AD SLOT C — BOTTOM BANNER ===== -->
+  <div id="adsense-bottom" class="ad-slot ad-slot-banner" aria-label="Publicidade" role="complementary">
+    <div class="ad-placeholder">
+      <span>Espaço Publicitário — 728×90</span>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-wgray text-white py-10 px-4 mt-0">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-9 h-9 bg-wgreen rounded-full flex items-center justify-center">
+              <i class="fab fa-whatsapp text-white text-lg"></i>
+            </div>
+            <span class="font-bold text-lg">GeradorLink<span class="text-wgreen">WA</span></span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Ferramenta gratuita para criar links diretos para WhatsApp com mensagem personalizada.
+          </p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-wgreen transition-colors" aria-label="Instagram">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-wgreen transition-colors" aria-label="Facebook">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-wgreen transition-colors" aria-label="Twitter">
+              <i class="fab fa-twitter text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-3">Navegação</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-white/70 hover:text-wgreen transition-colors">🏠 Início</a></li>
+            <li><a href="privacy.html" class="text-white/70 hover:text-wgreen transition-colors">🔒 Política de Privacidade</a></li>
+            <li><a href="terms.html" class="text-white/70 hover:text-wgreen transition-colors">📋 Termos de Uso</a></li>
+            <li><a href="contact.html" class="text-white/70 hover:text-wgreen transition-colors">✉️ Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-3">Recursos</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>✅ Gerador de QR Code</li>
+            <li>✅ Links Recentes</li>
+            <li>✅ Mensagem Personalizada</li>
+            <li>✅ Suporte a 25+ Países</li>
+            <li>✅ 100% Gratuito</li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-3">Contato</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="contact.html" class="text-white/70 hover:text-wgreen transition-colors flex items-center gap-2">
+                <i class="fas fa-envelope text-wgreen w-4"></i>
+                Enviar mensagem
+              </a>
+            </li>
+            <li class="text-white/70 flex items-start gap-2">
+              <i class="fas fa-globe text-wgreen w-4 mt-0.5"></i>
+              <span>Disponível em todo o Brasil e no mundo</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-white/40 text-xs">
+          © 2025 GeradorLinkWA. Todos os direitos reservados.
+        </p>
+        <p class="text-white/40 text-xs text-center">
+          Este site não é afiliado ao WhatsApp Inc. ou Meta Platforms, Inc.
+        </p>
+        <p class="text-white/40 text-xs">
+          Feito com <span class="text-red-400">♥</span> no Brasil 🇧🇷
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <i id="toastIcon" class="fas fa-check-circle text-wgreen"></i>
+    <span id="toastMsg"></span>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-6 right-6 w-11 h-11 bg-wgreen text-white rounded-full shadow-lg shadow-green-300 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-green-500 active:scale-90 z-40" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="js/app.js"></script>
+</body>
+</html>
