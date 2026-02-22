@@ -128,7 +128,7 @@
   <!-- ===== AD SLOT A — TOP BANNER ===== -->
   <div id="adsense-top" class="ad-slot ad-slot-banner" aria-label="Publicidade" role="complementary">
     <!-- Top Banner -->
-    <div class="ad-container">
+    <div class="ad-container" id="adsense-top">
       <ins class="adsbygoogle"
            style="display:block;min-width:320px;min-height:100px"
            data-ad-client="ca-pub-3424459601511679"
@@ -136,9 +136,15 @@
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        });
+        function loadAdSenseAdTop() {
+          const adContainer = document.getElementById('adsense-top');
+          if (adContainer && adContainer.offsetWidth > 0) {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          } else {
+            setTimeout(loadAdSenseAdTop, 500);
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadAdSenseAdTop);
       </script>
     </div>
   </div>
@@ -365,7 +371,7 @@
         <!-- ===== AD SLOT B — MOBILE (between generator and history) ===== -->
         <div id="adsense-middle" class="ad-slot ad-slot-rect lg:hidden mt-6" aria-label="Publicidade" role="complementary">
           <!-- Mobile Rectangle -->
-          <div class="ad-container">
+          <div class="ad-container" id="adsense-middle">
             <ins class="adsbygoogle"
                  style="display:block;min-width:320px;min-height:100px"
                  data-ad-client="ca-pub-3424459601511679"
@@ -373,9 +379,15 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              });
+              function loadAdSenseAdMiddle() {
+                const adContainer = document.getElementById('adsense-middle');
+                if (adContainer && adContainer.offsetWidth > 0) {
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                } else {
+                  setTimeout(loadAdSenseAdMiddle, 500);
+                }
+              }
+              document.addEventListener('DOMContentLoaded', loadAdSenseAdMiddle);
             </script>
           </div>
         </div>
@@ -454,7 +466,7 @@
         <!-- AD SLOT B — SIDEBAR (Desktop) -->
         <div id="adsense-sidebar" class="ad-slot ad-slot-sidebar sticky top-24" aria-label="Publicidade" role="complementary">
           <!-- Sidebar 300x600 -->
-          <div class="ad-container">
+          <div class="ad-container" id="adsense-sidebar">
             <ins class="adsbygoogle"
                  style="display:block;width:300px;height:600px"
                  data-ad-client="ca-pub-3424459601511679"
@@ -462,9 +474,15 @@
                  data-ad-format="auto"
                  data-full-width-responsive="false"></ins>
             <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              });
+              function loadAdSenseAdSidebar() {
+                const adContainer = document.getElementById('adsense-sidebar');
+                if (adContainer && adContainer.offsetWidth > 0) {
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                } else {
+                  setTimeout(loadAdSenseAdSidebar, 500);
+                }
+              }
+              document.addEventListener('DOMContentLoaded', loadAdSenseAdSidebar);
             </script>
           </div>
         </div>
@@ -670,7 +688,7 @@
   <!-- ===== AD SLOT C — BOTTOM BANNER ===== -->
   <div id="adsense-bottom" class="ad-slot ad-slot-banner" aria-label="Publicidade" role="complementary">
     <!-- Bottom Banner -->
-    <div class="ad-container">
+    <div class="ad-container" id="adsense-bottom">
       <ins class="adsbygoogle"
            style="display:block;min-width:320px;min-height:100px"
            data-ad-client="ca-pub-3424459601511679"
@@ -678,9 +696,15 @@
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        });
+        function loadAdSenseAdBottom() {
+          const adContainer = document.getElementById('adsense-bottom');
+          if (adContainer && adContainer.offsetWidth > 0) {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          } else {
+            setTimeout(loadAdSenseAdBottom, 500);
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadAdSenseAdBottom);
       </script>
     </div>
   </div>
