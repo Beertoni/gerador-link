@@ -130,7 +130,7 @@
     <!-- Top Banner -->
     <div class="ad-container" id="adsense-top">
       <ins class="adsbygoogle"
-           style="display:block;min-width:320px;min-height:100px"
+           style="display:block;min-width:320px;min-height:100px;width:100%;"
            data-ad-client="ca-pub-3424459601511679"
            data-ad-slot="5699125487"
            data-ad-format="auto"
@@ -138,7 +138,8 @@
       <script>
         function loadAdSenseAdTop() {
           const adContainer = document.getElementById('adsense-top');
-          if (adContainer && adContainer.offsetWidth > 0) {
+          const style = adContainer ? getComputedStyle(adContainer) : {};
+          if (adContainer && adContainer.offsetWidth > 0 && style.display !== 'none' && style.visibility !== 'hidden') {
             (adsbygoogle = window.adsbygoogle || []).push({});
           } else {
             setTimeout(loadAdSenseAdTop, 500);
@@ -373,7 +374,7 @@
           <!-- Mobile Rectangle -->
           <div class="ad-container" id="adsense-middle">
             <ins class="adsbygoogle"
-                 style="display:block;min-width:320px;min-height:100px"
+                 style="display:block;min-width:320px;min-height:100px;width:100%;"
                  data-ad-client="ca-pub-3424459601511679"
                  data-ad-slot="1759880474"
                  data-ad-format="auto"
@@ -381,7 +382,8 @@
             <script>
               function loadAdSenseAdMiddle() {
                 const adContainer = document.getElementById('adsense-middle');
-                if (adContainer && adContainer.offsetWidth > 0) {
+                const style = adContainer ? getComputedStyle(adContainer) : {};
+                if (adContainer && adContainer.offsetWidth > 0 && style.display !== 'none' && style.visibility !== 'hidden') {
                   (adsbygoogle = window.adsbygoogle || []).push({});
                 } else {
                   setTimeout(loadAdSenseAdMiddle, 500);
@@ -468,7 +470,7 @@
           <!-- Sidebar 300x600 -->
           <div class="ad-container" id="adsense-sidebar">
             <ins class="adsbygoogle"
-                 style="display:block;width:300px;height:600px"
+                 style="display:block;min-width:320px;min-height:100px;width:100%;"
                  data-ad-client="ca-pub-3424459601511679"
                  data-ad-slot="1871561116"
                  data-ad-format="auto"
@@ -476,7 +478,8 @@
             <script>
               function loadAdSenseAdSidebar() {
                 const adContainer = document.getElementById('adsense-sidebar');
-                if (adContainer && adContainer.offsetWidth > 0) {
+                const style = adContainer ? getComputedStyle(adContainer) : {};
+                if (adContainer && adContainer.offsetWidth > 0 && style.display !== 'none' && style.visibility !== 'hidden') {
                   (adsbygoogle = window.adsbygoogle || []).push({});
                 } else {
                   setTimeout(loadAdSenseAdSidebar, 500);
@@ -690,7 +693,7 @@
     <!-- Bottom Banner -->
     <div class="ad-container" id="adsense-bottom">
       <ins class="adsbygoogle"
-           style="display:block;min-width:320px;min-height:100px"
+           style="display:block;min-width:320px;min-height:100px;width:100%;"
            data-ad-client="ca-pub-3424459601511679"
            data-ad-slot="4658011130"
            data-ad-format="auto"
@@ -698,7 +701,8 @@
       <script>
         function loadAdSenseAdBottom() {
           const adContainer = document.getElementById('adsense-bottom');
-          if (adContainer && adContainer.offsetWidth > 0) {
+          const style = adContainer ? getComputedStyle(adContainer) : {};
+          if (adContainer && adContainer.offsetWidth > 0 && style.display !== 'none' && style.visibility !== 'hidden') {
             (adsbygoogle = window.adsbygoogle || []).push({});
           } else {
             setTimeout(loadAdSenseAdBottom, 500);
