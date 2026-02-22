@@ -826,9 +826,7 @@ input.input-success {
 
 /* ===== PRINT ===== */
 @media print {
-  .ad-slot, header, footer, #backToTop, #toast {
-    display: none !important;
-  }
+  /* Removido display: none !important para evitar ocultar containers de anúncio */
 }
 
 /* ===== SCROLLBAR ===== */
