@@ -18,7 +18,6 @@
  */
 
 'use strict';
-
 /* ===== CONSTANTS ===== */
 const STORAGE_KEY  = 'wa_recent_links';
 const MAX_HISTORY  = 5;
