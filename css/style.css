@@ -1,3 +1,10 @@
+/* AdSense container fix */
+.ad-container {
+  min-width: 320px;
+  width: 100%;
+  min-height: 100px;
+  display: block;
+}
 /* =============================================
    GERADOR LINK WHATSAPP — Custom Styles
    ============================================= */
